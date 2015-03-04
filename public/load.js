@@ -9,5 +9,11 @@ xmlhttp.onreadystatechange=function() {
   }
 }
 
-xmlhttp.open("GET","/salutation",true);
-xmlhttp.send();
+var update = function() {
+	xmlhttp.open("GET","/salutation",true);
+	xmlhttp.send();
+}
+
+document.getElementById('update_btn').addEventListener('click', update);
+
+update();
